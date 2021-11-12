@@ -1,0 +1,31 @@
+version: '3.5'
+services:
+  nginx:
+    image: nginx:alpine
+    volumes:
+     - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+     - ./nginx/common:/usr/share/nginx/html/common
+    ports:
+     - "4000:3000"
+
+  todo-frontend:
+    build:
+      context: ./todo/frontend
+      dockerfile: build/Dockerfile
+    ports:
+     - "4001:3000"
+
+  # team_blue:
+  #   build: ./team-blue
+  #   ports:
+  #    - "3001:3001"
+
+  # team_green:
+  #   build: ./team-green
+  #   ports:
+  #    - "3002:3002"
+
+  # team_red:
+  #   build: ./team-red
+  #   ports:
+  #    - "3003:3003"
