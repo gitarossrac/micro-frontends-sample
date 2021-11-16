@@ -16,7 +16,7 @@
         var todo = event.detail;
 
         var item = {
-            title: 'Breaking: new todo has been added: "' + todo.description + '"'
+            title: `Breaking: new todo has been added: "${todo.description}"`
         };
 
         data.news.push(item);
@@ -26,6 +26,7 @@
         data: function() {
             return data;
         },
+        
         mounted: function() {
             document.addEventListener('todo:added', todoAdded);
         },
