@@ -1,5 +1,5 @@
 <template>
     <div>
-        News test app
+        <div>Cover</div>
     </div>
 </template>

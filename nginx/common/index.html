@@ -4,8 +4,24 @@
     <meta charset="utf-8">
     <title>µFrontends</title>
     <script type="text/javascript" src="todo/client.js"></script>
+    <script type="text/javascript" src="news/news.min.js"></script>
+
+    <script>
+      function newsNavigateTo(component) {
+        var newsContainer = document.getElementById('news-container');
+
+        newsContainer.innerHTML = '<news-' + component + '></news-' + component + '>';
+      }
+    </script>
   </head>
   <body>
     <todo-list></todo-list>
+    <nav>
+      <a href="javascript:newsNavigateTo('cover')">News Cover</a>
+      <a href="javascript:newsNavigateTo('list')">News List</a>
+    </nav>
+    <div id="news-container">
+      <news-list></news-list>
+    </div>
   </body>
 </html>

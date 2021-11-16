@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "bundle": "cross-env vue-cli-service build --inline-vue --target wc-async --name news 'src/components/*.vue'"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +14,9 @@
     "vue": "^2.6.14"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.5.15",
+    "@vue/cli": "^4.5.15",
+    "@vue/cli-service-global": "^4.5.15",
+    "cross-env": "^7.0.3",
     "vue-template-compiler": "^2.6.14"
   }
 }
