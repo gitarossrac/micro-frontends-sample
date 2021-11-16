@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "bundle": "cross-env vue-cli-service build --inline-vue --target wc-async --name news 'src/components/*.vue'"
+    "bundle": "cross-env vue-cli-service build --inline-vue --target wc-async --name news 'src/web-components/*.vue'"
   },
   "author": "",
   "license": "ISC",
