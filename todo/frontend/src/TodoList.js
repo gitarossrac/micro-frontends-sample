@@ -5,7 +5,15 @@ class TodoList extends HTMLElement
     ];
 
     connectedCallback() {
-        this.render();
+        var self = this;
+
+        if (document.readyState === "complete") {
+            self.render();
+        } else {
+            window.onload = function() {
+                self.render();
+            };
+        }
     }
 
     render() {
