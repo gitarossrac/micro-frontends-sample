@@ -28,11 +28,11 @@
         },
         
         mounted: function() {
-            document.addEventListener('todo:added', todoAdded);
+            window.addEventListener('todo:added', todoAdded);
         },
 
         beforeUnmount: function() {
-            document.removeEventListener(todoAdded);
+            window.removeEventListener(todoAdded);
         }
     };
 </script>

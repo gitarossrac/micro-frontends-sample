@@ -39,7 +39,7 @@ class TodoList extends HTMLElement
             }
         });
 
-        document.dispatchEvent(todoAddedEvent);
+        window.dispatchEvent(todoAddedEvent);
     }
 }
 
