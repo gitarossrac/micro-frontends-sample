@@ -8,6 +8,13 @@ services:
     ports:
      - "4000:3000"
 
+  blazor-custom-elements:
+    build:
+      context: ./blazor-custom-elements
+      dockerfile: build/Dockerfile
+    ports:
+     - "5000:3000"
+
   todo-frontend:
     build:
       context: ./todo/frontend
