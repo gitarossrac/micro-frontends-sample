@@ -28,3 +28,10 @@ services:
       dockerfile: build/Dockerfile
     ports:
      - "4003:3000"
+
+  interest-frontend:
+    build:
+      context: ./interest/frontend
+      dockerfile: frontend/Dockerfile
+    ports:
+     - "4005:80"
